@@ -1,0 +1,211 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>rTenant</title>
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="css/mBox.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<script src="https://www.rtenant.com/credit-checks/js/jquery.min.js" ></script>
+	<script src="js/mBox.js"></script>
+	<script>
+		$( function() {
+		$('.mBox').mBox();
+		});
+	  </script>
+	  <script>
+		$(".scrolling a[href^='#']").on('click', function(e) {
+			// prevent default anchor click behavior
+			e.preventDefault();
+			// animate
+			$('html, body').animate({ scrollTop: $(this.hash).offset().top }, 1100, 'swing', function () { });
+		});
+		$('a.submit').on('click', function() {
+			alert("Test");
+			var valid = true;
+			$form = $(this).closest('form');
+			$form.find('[required="required"]').each(function(idx, obj) {
+				if (!valid) { return; }
+				if ($(obj).val().length == 0) { $(obj).addClass('error'); valid = false; } else { $(obj).removeClass('error'); }
+			});
+			if (valid) { $form.submit(); }
+		});
+		</script>
+
+</head>
+<body>
+	<div class="site-fluid">
+		<header class="header">
+			<div class="sitewrapper">
+				<a href="https://www.rtenant.com/" class="logo"><img src="images/logo.png" title="rTenant" /></a>
+				<input class="menu-btn" type="checkbox" id="menu-btn" />
+				<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+				<ul class="menu">
+					<li><a href="http://www.rtenant.com/credit-checks/">Credit Checks</a></li>
+					<li><a href="http://www.rtenant.com/eviction-reports/">Eviction Reports</a></li>
+					<li><a href="http://www.rtenant.com/criminal-background-checks/">Background Checks</a></li>
+					<li><a href="https://www.rtenant.com/credit-checks/#price">Pricing</a></li>
+					<li><a href="https://www.rtenant.com/online-background-screening-faqs.html">FAQ</a></li>
+					<li><a href="https://secure.rtenant.com/landlord/register/signup.html">Sign Up</a></li>
+				</ul>
+			</div>
+		</header>
+		<section class="hero">
+			<div class="sitewrapper">
+				<div class="flLeft hero-left">
+					<h1>Tenant <br> Credit Checks</h1>
+					<h4>The fastest, most cost-effective tenant screening tools.</h4>
+					<p>It is important to diligently screen tenants to reduce risk. Past credit history, financial difficulties or high debt loads are early indicators to potential tenancy issues. With rTenant™️, you can run instant credit checks online from our national database and have the results within minutes.</p>
+				</div>
+				<div class="flRight hero-right">
+					<div class="forarea">
+						<h2>Get Started Today</h2>
+						<form action="https://secure.rtenant.com/landlord/signup/signup.php" name="frm_landlord" method="post">
+							<input type="hidden" name="l_newreport" value="1">
+							<input type="hidden" name="step" value="2">
+							  <ul>
+								<li><span class="left">Your Name<em>*</em></span><span class="right"><input type="text" name="indv_name" required="required" placeholder="Enter your full name" /></span></li>
+								<li><span class="left">Your Email<em>*</em> </span><span class="right"><input type="email" name="c_email" required="required" placeholder="Enter your email address" /></span></li>
+							  </ul>
+							  <button type="submit" name="submit" class="button btn-lg pull-right nomargin">Sign Up — It's Free!</button>
+							</form>
+						<div class="input-inline tollfree">Toll Free : (888) 727-3368</div>
+					</div>
+					<div class="heroimg"><img src="images/hero.png" title=""> </div>
+				</div>
+			</div>
+		</section>
+		<section class="dollar-content">
+			<div class="sitewrapper">
+				<div class="contents">
+					<h2>A few dollars now could save you thousands later.</h2>
+					<p>Backed by Real ID, Inc, rTenant™ offers the same quality and scope of screening solutions that large property management firms rely on at affordable prices. From credit and criminal background checks to eviction reports, purchase what you need — a single report or a package deal — and pay as you go.</p>
+					<div class="checkwrap">
+						<ul class="checklist">
+							<li>Instant On-Line Reports </li>
+							<li>Proprietary Credit Grading</li>
+						</ul>
+						<ul class="checklist">
+							<li>TransUnion, Experian and Equifax Data</li>
+							<li>Renter Pay Option Available</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="tenant-screening">
+			<div class="sitewrapper">
+				<div class="contents">
+					<div class="col tenant-left">
+					<img src="images/screening.png" title="Straight-Forward Tenant Screening">
+					<img src="images/report.jpeg"  class="mBox" >
+					</div>
+					<div class="col tenant-right">
+						<h2>Straight-Forward Tenant Screening</h2>
+						<p>Quick, reliable and secure,  rTenant™ allows landlords and property owners to run credit checks on propsective renters easily online and make educated leasing decisions within a matter of minutes. Once screening is authorized, reports are generated and sent directly to you</p>
+						<div class="btn"><a href="#" class="button">Get Started</a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="price" class="pricing">
+			<div class="sitewrapper">
+				<h2>Pricing</h2>
+				<p>Instant One-Time Reports or On-Demand Comprehensive Screening</p>
+				<ul class="pricelist">
+					<li>
+						<div class="price-head">
+							<h4>One-Time Credit Check</h4>
+							<h3><sup>$</sup>20<sup>95</sup></h3>
+						</div>
+						<ul class="checklist">
+							<li>Instant Credit Review</li>
+							<li>Late Payments & Collections</li>
+							<li>Tenancy Risk Level - rTenant Score*</li>
+						</ul>
+						<div class="price-foot">
+							<p>All credit checks require written consent.</p>
+							<div class="btn"><a href="https://www.rtenant.com/cart.html" class="buybtn">Buy Now</a></div>
+						</div>
+					</li>
+					<li class="purple">
+						<div class="price-head">
+							<h4>All-Inclusive Package</h4>
+							<div class="star"><img src="images/star.png" /></div>
+							<h3><sup>$</sup>28<sup>95</sup></h3>
+							<h3 class="oldprice">$50.00</h3>
+						</div>
+						<ul class="checklist">
+							<li>Credit Check</li>
+							<li>Background Check</li>
+							<li>Rental Eviction History</li>
+						</ul>
+						<div class="price-foot">
+							<div class="btn"><a href="https://secure.rtenant.com/landlord/register/signup.html" class="buybtn">Sign Up</a></div>
+						</div>
+					</li>
+				</ul>
+				<ul class="eviction-reports">
+					<li>Instant Background Checks or Eviction Reports.  <strong class="underline">$20.95</strong></li>
+					<li><a href="https://www.rtenant.com/cart.html" class="buybtn">Buy Now</a></li>
+				</ul>
+			</div>
+		</section>
+		<section class="client-logo">
+			<div class="sitewrapper">
+				<ul>
+					<li><img src="images/cl_01.png" /></li>
+					<li><img src="images/cl_02.png" /></li>
+					<li><img src="images/cl_03.png" /></li>
+				</ul>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="sitewrapper">
+				<div style="min-height: 100px; overflow: hidden;" class="shopperapproved_widget sa_rotate sa_count3 sa_horizontal sa_count3 sa_bgWhite sa_colorBlack sa_borderGray sa_rounded sa_jMy sa_fixed sa_showlinks sa_large sa_showdate "></div><script type="text/javascript">var sa_interval = 5000;function saLoadScript(src) { var js = window.document.createElement('script'); js.src = src; js.type = 'text/javascript'; document.getElementsByTagName("head")[0].appendChild(js); } if (typeof(shopper_first) == 'undefined') saLoadScript('//www.shopperapproved.com/widgets/testimonial/3.0/26230.js'); shopper_first = true; </script><div style="text-align:right;"><a class="sa_footer" href="http://www.shopperapproved.com/reviews/rTenant.com/" target="_blank" rel="nofollow"><img class="sa_widget_footer" style="border: 0;" alt="" src=https://www.shopperapproved.com/widgets/widgetfooter-whitelogo.png></a></div>
+				<!--ul class="ratinglist">
+					<li>
+						<img src="images/star.png" />
+						<p>As usual, easy to use and no issue</p>
+						<h6>David A.</h6>
+					</li>
+					<li>
+						<img src="images/star.png" />
+						<p>Very easy process! Results within minutes</p>
+						<h6>Bryan F.</h6>
+					</li>
+					<li>
+						<img src="images/star.png" />
+						<p>Quickest Response Ever!!</p>
+						<h6>Shawnteria C.</h6>
+					</li>
+				</ul-->
+				<div class="finding">
+					<h2>Finding The Right Tenant Has Never Been Easier</h2>
+					<div class="btn"><a href="#" class="button">Sign Up , It’s FREE</a></div>
+				</div>
+				<div class="copyright">
+					<div class="flLeft">
+						<ul>
+							<li><a href="http://www.bbb.org/chicago/business-reviews/screening-background-and-employment/real-id-in-lincolnwood-il-88431132" target="_blank"><img src="images/bbb-logo.png" border="0" /></a></li>
+							<li>Copyright © 2022 Real ID, Inc. All Rights Reserved.</li>
+							<li><a href="http://www.rtenant.com/eula.html">Terms of Use</a></li>
+							<li><a href="http://www.rtenant.com/privacy.html">Privacy Policy</a></li>
+							<li><a href="http://www.rtenant.com/laws-notices.html">Laws & Notices</a></li>
+						</ul>
+					</div>
+					<div class="flRight">
+						<ul>
+							<li>Legal Toll Free: <a href="tel:(888) 727-3368">(888) 727-3368</a></li>
+							<li><a target="_blank" href="http://www.facebook.com/pages/Real-ID/103000019779005"><img src="images/fb.png" title="Facebook" /></a></li>
+							<li><a target="_blank" href="https://twitter.com/RealIDInc"><img src="images/twt.png" title="Twitter" /></a></li>
+							<li><a target="_blank" href="http://www.linkedin.com/company/real-id-inc."><img src="images/in.png" title="Linkedin" /></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
